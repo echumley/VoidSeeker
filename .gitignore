@@ -1,0 +1,106 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# VoidSeeker specific
+logs/
+logs/*.log
+results.txt
+output/
+reports/
+*.csv
+!targets.txt
+!config/wordlists/
+
+# Data files
+data/postgres/*
+!data/postgres/.gitkeep
+data/targets/*.txt
+!data/targets/target_list.txt
+data/
+*.bak
+*.tmp
+
+# Testing
+.venv_test/
+
+# API Keys and secrets (NEVER COMMIT THESE!)
+.api_key
+.api_keys
+.secrets
+*.key
+*.pem
+credentials.json
+config_local.json
+shodan_api_key.txt

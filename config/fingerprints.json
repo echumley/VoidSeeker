@@ -1,0 +1,284 @@
+{
+  "html_keywords_file": "config/wordlists/html-keywords.txt",
+  "services": {
+    "admin_login": {
+      "name": "Admin/Login Portal",
+      "description": "Administrative login interface",
+      "ports": [80, 443, 8080, 8443],
+      "signals": {
+        "html_title_patterns": ["admin", "login", "signin", "auth", "dashboard", "portal", "control", "management"],
+        "url_patterns": ["admin", "login", "auth", "signin", "dashboard", "control", "manage"]
+      },
+      "weights": {
+        "html_title": 8,
+        "url_pattern": 5
+      }
+    },
+    "bmc_ipmi": {
+      "name": "BMC/IPMI Management",
+      "description": "Baseboard Management Controller or IPMI interface",
+      "ports": [623, 5900, 8080, 8443],
+      "signals": {
+        "html_title_patterns": ["bmc", "ipmi", "intelligent platform", "management", "remote access"],
+        "url_patterns": ["ipmi", "bmc", "cgi-bin", "redfish", "cgi-bin/login"],
+        "server_headers": ["iLO", "DRAC", "iDRAC", "Baseboard"],
+        "html_body_patterns": ["hp integrated lights-out", "ilO", "ilo", "baseboard management controller", "intelligent platform management", "bmc firmware", "ipmi"]
+      },
+      "weights": {
+        "html_title": 10,
+        "url_pattern": 7,
+        "server_header": 12,
+        "html_body": 8
+      }
+    },
+    "monitoring_dashboard": {
+      "name": "Monitoring/Metrics Dashboard",
+      "description": "System monitoring, metrics, or observability platform",
+      "ports": [3000, 5601, 9090, 9200, 80, 443],
+      "signals": {
+        "html_title_patterns": ["prometheus", "grafana", "kibana", "elasticsearch", "splunk", "datadog", "newrelic", "metrics", "monitoring"],
+        "url_patterns": ["prometheus", "grafana", "kibana", "metrics", "dashboard", "monitoring", "elasticsearch", "api/v", "api/dashboard"],
+        "html_body_patterns": ["grafana", "prometheus", "kibana", "elasticsearch", "splunk", "metrics", "time series", "observability"]
+      },
+      "weights": {
+        "html_title": 10,
+        "url_pattern": 6,
+        "html_body": 7
+      }
+    },
+    "ci_cd_platform": {
+      "name": "CI/CD or Build Platform",
+      "description": "Continuous Integration/Deployment or build automation system",
+      "ports": [8080, 8443, 80, 443],
+      "signals": {
+        "html_title_patterns": ["jenkins", "gitlab", "github", "travis", "circleci", "build", "pipeline"],
+        "url_patterns": ["jenkins", "gitlab", "job", "pipeline", "build", "ci", "circleci"],
+        "html_body_patterns": ["jenkins", "gitlab", "github", "build", "pipeline", "ci/cd", "continuous integration"]
+      },
+      "weights": {
+        "html_title": 10,
+        "url_pattern": 6,
+        "html_body": 7
+      }
+    },
+    "container_registry": {
+      "name": "Container/Image Registry",
+      "description": "Docker, container, or artifact registry interface",
+      "ports": [80, 443, 5000],
+      "signals": {
+        "html_title_patterns": ["harbor", "registry", "docker", "artifact", "nexus"],
+        "url_patterns": ["harbor", "registry", "docker", "artifact", "api/v2", "v2/"]
+      },
+      "weights": {
+        "html_title": 10,
+        "url_pattern": 6
+      }
+    },
+    "virtualization": {
+      "name": "Virtualization Platform",
+      "description": "Hypervisor or virtual machine management interface",
+      "ports": [443, 5900, 8006, 6443],
+      "signals": {
+        "html_title_patterns": ["vmware", "vsphere", "proxmox", "hyper-v", "kvm", "xenserver", "esxi"],
+        "url_patterns": ["vmware", "vsphere", "proxmox", "pve", "ui/", "vm", "host"],
+        "html_body_patterns": ["vmware", "vsphere", "proxmox", "hyper-v", "kvm", "xenserver", "esxi", "virtual machine"]
+      },
+      "weights": {
+        "html_title": 10,
+        "url_pattern": 6,
+        "html_body": 7
+      }
+    },
+    "collaboration_platform": {
+      "name": "Collaboration/Wiki Platform",
+      "description": "Team collaboration, wiki, or documentation platform",
+      "ports": [8080, 8443, 80, 443],
+      "signals": {
+        "html_title_patterns": ["confluence", "jira", "nextcloud", "sharepoint", "wiki", "collaboration"],
+        "url_patterns": ["confluence", "jira", "nextcloud", "wiki", "remote.php", "browse"]
+      },
+      "weights": {
+        "html_title": 10,
+        "url_pattern": 6
+      }
+    },
+    "identity_provider": {
+      "name": "Identity/Access Platform",
+      "description": "IAM, authentication, or identity provider service",
+      "ports": [8080, 8443, 80, 443],
+      "signals": {
+        "html_title_patterns": ["keycloak", "okta", "auth0", "ldap", "identity", "sso", "oauth"],
+        "url_patterns": ["keycloak", "auth", "oauth", "sso", "saml", "realms"]
+      },
+      "weights": {
+        "html_title": 10,
+        "url_pattern": 6
+      }
+    },
+    "code_quality": {
+      "name": "Code Quality/Analysis Platform",
+      "description": "Code analysis, quality, or security scanning platform",
+      "ports": [9000, 8080, 80, 443],
+      "signals": {
+        "html_title_patterns": ["sonarqube", "sonar", "fortify", "checkmarx", "analysis"],
+        "url_patterns": ["sonar", "analysis", "api/ce", "project"]
+      },
+      "weights": {
+        "html_title": 10,
+        "url_pattern": 6
+      }
+    },
+    "secrets_management": {
+      "name": "Secrets/Credential Management",
+      "description": "Secrets vault or credential management system",
+      "ports": [8200, 8080, 443],
+      "signals": {
+        "html_title_patterns": ["vault", "secret", "credential", "password", "key management"],
+        "url_patterns": ["vault", "v1/", "secret", "auth"]
+      },
+      "weights": {
+        "html_title": 10,
+        "url_pattern": 6
+      }
+    },
+    "service_mesh": {
+      "name": "Service Mesh/Discovery",
+      "description": "Service discovery, mesh, or orchestration platform",
+      "ports": [8500, 8600, 80, 443],
+      "signals": {
+        "html_title_patterns": ["consul", "eureka", "etcd", "service mesh"],
+        "url_patterns": ["consul", "ui/", "v1/", "services"]
+      },
+      "weights": {
+        "html_title": 10,
+        "url_pattern": 6
+      }
+    },
+    "generic_login_portal": {
+      "name": "Login Portal",
+      "description": "Generic authentication or login interface (unidentified service)",
+      "ports": [80, 443, 8080, 8443, 8888],
+      "signals": {
+        "html_title_patterns": ["login", "signin", "sign in", "authentication", "auth", "account", "password", "logon", "access", "portal"],
+        "url_patterns": ["login", "signin", "auth", "account", "start", "portal", "access", "session", "user"]
+      },
+      "weights": {
+        "html_title": 8,
+        "url_pattern": 5
+      }
+    },
+    "web_server": {
+      "name": "Web Server/Application",
+      "description": "Generic web application or service",
+      "ports": [80, 443, 8080, 8443],
+      "signals": {
+        "html_title_patterns": ["app", "page", "server", "service"],
+        "url_patterns": ["index", "home", "api", "web", "application"]
+      },
+      "weights": {
+        "html_title": 3,
+        "url_pattern": 2
+      }
+    },
+    "hp_ilo": {
+      "name": "HP iLO (Integrated Lights-Out)",
+      "description": "HP/HPE Integrated Lights-Out management interface for remote server management",
+      "ports": [443, 80, 8443, 8080],
+      "signals": {
+        "html_title_patterns": ["ilo", "integrated lights", "lights-out"],
+        "url_patterns": ["ilo", "ilom", "redfish", "cgi-bin/login"],
+        "server_headers": ["iLO"],
+        "html_body_patterns": ["ilo", "integrated lights-out", "hp integrated lights", "ilO.js", "iloglobal", "ilo firmware", "ilo version", "hewlett packard enterprise"]
+      },
+      "weights": {
+        "html_title": 12,
+        "url_pattern": 8,
+        "server_header": 15,
+        "html_body": 12
+      }
+    },
+    "dell_idrac": {
+      "name": "Dell iDRAC (Integrated Dell Remote Access Controller)",
+      "description": "Dell Integrated Dell Remote Access Controller for remote server management",
+      "ports": [443, 80, 8443, 8080],
+      "signals": {
+        "html_title_patterns": ["idrac", "dell remote", "drac"],
+        "url_patterns": ["idrac", "drac", "redfish", "cgi-bin/login"],
+        "server_headers": ["iDRAC", "DRAC"],
+        "html_body_patterns": ["idrac", "dell remote access", "dell drac", "drac firmware", "dell idrac", "remote console", "virtual console"]
+      },
+      "weights": {
+        "html_title": 12,
+        "url_pattern": 8,
+        "server_header": 15,
+        "html_body": 9
+      }
+    },
+    "lenovo_xcc": {
+      "name": "Lenovo XCC (Flex System Manager)",
+      "description": "Lenovo XClarity Controller for ThinkSystem servers",
+      "ports": [443, 80, 8443, 8080],
+      "signals": {
+        "html_title_patterns": ["xcc", "xclarity", "lenovo"],
+        "url_patterns": ["xcc", "xclarity", "cgi-bin"],
+        "server_headers": ["XClarity", "Lenovo"],
+        "html_body_patterns": ["xclarity", "lenovo xcc", "thinkserver", "thinkcentre", "flex system manager", "xcc firmware"]
+      },
+      "weights": {
+        "html_title": 12,
+        "url_pattern": 8,
+        "server_header": 15,
+        "html_body": 9
+      }
+    },
+    "supermicro_bmc": {
+      "name": "Supermicro BMC (SuperUserTools)",
+      "description": "Supermicro Baseboard Management Controller interface",
+      "ports": [443, 80, 8443, 8080],
+      "signals": {
+        "html_title_patterns": ["supermicro", "bmc", "superuser tools"],
+        "url_patterns": ["bmc", "cgi-bin"],
+        "server_headers": ["Supermicro"],
+        "html_body_patterns": ["supermicro", "superuser tools", "ipmi", "bmc firmware", "baseboard management controller", "super user tools"]
+      },
+      "weights": {
+        "html_title": 12,
+        "url_pattern": 8,
+        "server_header": 15,
+        "html_body": 9
+      }
+    },
+    "cisco_cimc": {
+      "name": "Cisco CIMC (C3060 Management Controller)",
+      "description": "Cisco Integrated Management Controller for UCS systems",
+      "ports": [443, 80, 8443, 8080],
+      "signals": {
+        "html_title_patterns": ["cimc", "cisco", "ucs"],
+        "url_patterns": ["cimc", "cgi-bin"],
+        "server_headers": ["Cisco", "CIMC"],
+        "html_body_patterns": ["cimc", "cisco unified computing", "ucs manager", "cisco ucs", "cimc firmware"]
+      },
+      "weights": {
+        "html_title": 12,
+        "url_pattern": 8,
+        "server_header": 15,
+        "html_body": 9
+      }
+    },
+    "generic_ipmi": {
+      "name": "Generic IPMI/BMC Interface",
+      "description": "Generic Intelligent Platform Management Interface",
+      "ports": [623, 443, 80, 8443, 8080],
+      "signals": {
+        "html_title_patterns": ["ipmi", "bmc", "baseboard management", "intelligent platform"],
+        "url_patterns": ["ipmi", "bmc", "cgi-bin/login", "api/login"],
+        "html_body_patterns": ["ipmi", "baseboard management controller", "intelligent platform management", "bmc firmware", "remote access controller"]
+      },
+      "weights": {
+        "html_title": 10,
+        "url_pattern": 7,
+        "html_body": 8
+      }
+    }
+  }
+}

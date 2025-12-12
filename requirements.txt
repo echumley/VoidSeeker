@@ -1,0 +1,22 @@
+# VoidSeeker - Deep Web Service Enumeration & Fingerprinting
+# Production dependencies
+
+# HTTP and networking
+requests>=2.28.0
+urllib3>=1.26.0
+
+# Port scanning (Nmap Python wrapper)
+python-nmap>=0.7.1
+
+# DNS reconnaissance
+dnspython>=2.3.0
+
+# Shodan API integration
+shodan>=1.28.0
+
+# CLI interface and formatting
+rich>=13.0.0
+prettytable>=3.5.0
+
+# Security
+cryptography>=41.0.0

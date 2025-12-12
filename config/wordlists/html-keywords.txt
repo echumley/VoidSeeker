@@ -1,0 +1,503 @@
+login
+password
+username
+signin
+sign in
+authenticate
+authentication
+auth
+account
+dashboard
+admin
+management
+console
+control
+panel
+portal
+access
+session
+user
+email
+submit
+button
+form
+input
+credentials
+logon
+logout
+register
+signup
+reset
+forgot
+remember
+cookie
+session
+token
+jwt
+oauth
+saml
+ldap
+active directory
+domain
+user provisioning
+access control
+permission
+role
+privilege
+enterprise
+corporate
+business
+organization
+team
+group
+member
+tenant
+workspace
+project
+application
+service
+platform
+system
+infrastructure
+cloud
+aws
+azure
+google
+kubernetes
+docker
+container
+database
+server
+host
+network
+firewall
+vpn
+proxy
+load balancer
+cache
+cdn
+storage
+backup
+disaster recovery
+monitoring
+logging
+analytics
+metrics
+observability
+tracing
+profiling
+debugging
+testing
+staging
+development
+production
+environment
+configuration
+settings
+preferences
+options
+menu
+navigation
+header
+footer
+sidebar
+toolbar
+widget
+plugin
+extension
+addon
+module
+component
+library
+framework
+sdk
+api
+rest
+graphql
+websocket
+mqtt
+grpc
+soap
+xml
+json
+yaml
+toml
+database
+sql
+nosql
+mongodb
+postgresql
+mysql
+elasticsearch
+redis
+memcached
+rabbit
+kafka
+queue
+message
+event
+stream
+real time
+realtime
+websocket
+socket
+push
+notification
+email
+sms
+otp
+two factor
+2fa
+mfa
+multifactor
+biometric
+fingerprint
+face
+voice
+iris
+scan
+recognition
+behavioral
+anomaly
+detection
+alert
+incident
+security
+vulnerability
+threat
+attack
+exploit
+payload
+injection
+xss
+csrf
+sql injection
+command injection
+path traversal
+directory traversal
+file upload
+file inclusion
+lfi
+rfi
+rce
+remote code execution
+arbitrary
+privilege escalation
+elevation
+sandbox escape
+buffer overflow
+heap
+stack
+memory
+overflow
+underflow
+use after free
+double free
+race condition
+deadlock
+null pointer
+exception
+error
+crash
+panic
+hang
+timeout
+resource leak
+denial of service
+dos
+ddos
+distributed
+botnet
+malware
+virus
+worm
+trojan
+ransomware
+spyware
+adware
+rootkit
+bootkit
+firmware
+bios
+uefi
+hypervisor
+virtualization
+container
+orchestration
+cluster
+node
+pod
+service
+deployment
+statefulset
+daemonset
+cronjob
+job
+ingress
+network policy
+service mesh
+istio
+envoy
+consul
+nomad
+terraform
+ansible
+puppet
+chef
+salt
+vagrant
+docker compose
+kubernetes helm
+openstack
+cloudstack
+opennebula
+proxmox
+esxi
+hyperv
+virtualbox
+vmware
+kvm
+xen
+qemu
+bochs
+dosbox
+wine
+ilo
+idrac
+impi
+dell
+hewlett
+packard
+supermicro
+intel
+inspur
+hp
+hpe
+grafana
+prometheus
+kibana
+elasticsearch
+splunk
+jenkins
+gitlab
+github
+travis
+circleci
+nexus
+sonarqube
+checkmarx
+fortify
+keycloak
+okta
+auth0
+vault
+consul
+eureka
+etcd
+confluence
+jira
+nextcloud
+sharepoint
+harbor
+docker registry
+artifactory
+replicated
+linux
+ubuntu
+centos
+debian
+rhel
+fedora
+alpine
+coreos
+openssl
+curl
+wget
+python
+nodejs
+ruby
+java
+php
+perl
+golang
+rust
+csharp
+powershell
+bash
+sh
+zsh
+vim
+nano
+emacs
+git
+svn
+mercurial
+perforce
+clearcase
+rational
+ibm
+oracle
+mysql
+postgresql
+mariadb
+mongodb
+cassandra
+dynamodb
+redshift
+snowflake
+bigquery
+tableau
+power bi
+qlikview
+microstrategy
+cognos
+sisense
+looker
+mode
+periscope
+databox
+metabase
+superset
+domo
+sisense
+sisense
+druid
+pig
+hive
+spark
+storm
+flink
+samza
+beam
+nifi
+talend
+informatica
+pentaho
+mulesoft
+apache
+nginx
+iis
+tomcat
+jboss
+wildfly
+weblogic
+websphere
+glassfish
+jetty
+undertow
+netty
+akka
+spring
+spring boot
+hibernate
+mybatis
+sqlalchemy
+django
+flask
+pyramid
+tornado
+bottle
+web2py
+aiohttp
+fastapi
+starlette
+uvicorn
+gunicorn
+passenger
+mod wsgi
+uwsgi
+grpc
+corba
+dcom
+rmi
+jni
+cgi
+fcgi
+wsgi
+asgi
+openapi
+swagger
+raml
+apiblueprint
+json schema
+xml schema
+xsd
+wsdl
+soap envelope
+rest api
+hal
+json api
+graphql schema
+protobuf
+avro
+thrift
+messagepack
+cap nproto
+flatbuffers
+cbor
+bson
+msgpack
+ion
+ubjson
+smile
+xml
+rss
+atom
+netconf
+yang
+snmp
+syslog
+syslog ng
+rsyslog
+logstash
+filebeat
+metricbeat
+packetbeat
+auditbeat
+heartbeat
+functionsbeat
+winlogbeat
+collectd
+telegraf
+fluentd
+fluentbit
+vector
+rsyslog
+srslog
+nxlog
+graylog
+splunk forwarder
+splunk universal forwarder
+sumologic
+datadog agent
+newrelic agent
+elastic agent
+prometheus exporter
+statsd
+graphite
+influxdb
+victops
+prometheus
+thanos
+cortex
+mimir
+loki
+tempo
+jaeger
+zipkin
+lightstep
+dynatrace
+appdynamics
+new relic
+elastic apm
+datadog apm
+honeycomb
+sumo logic
+cloudwatch
+stackdriver
+azure monitor
+app insights
+application insights
+dynatrace
+appdynamics
+splunk apm
