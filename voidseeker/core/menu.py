@@ -95,9 +95,10 @@ class VoidSeekerMenu:
         table.add_column("Option", style="cyan")
         table.add_column("Value", style="green")
         
+        # Safely get target count, handling missing file
         targets_display = "Single target" if self.options['single_target'] else (
             f"{len(read_targets(self.options['targets']))} targets" 
-            if self.options['targets'] else "Not set"
+            if self.options['targets'] and Path(self.options['targets']).exists() else "Not set"
         )
         
         table.add_row("Targets", targets_display)
@@ -379,6 +380,16 @@ class VoidSeekerMenu:
         if not self.options['targets'] and not self.options['single_target']:
             console.print("[red]Error: No targets specified[/red]")
             return False
+        
+        # Check targets file exists if using file-based targets
+        if self.options['targets'] and not self.options['single_target']:
+            if not os.path.exists(self.options['targets']):
+                console.print(f"\n[red]✗ Error: Targets file not found: {self.options['targets']}[/red]")
+                console.print("[yellow]  Tip: You can either:[/yellow]")
+                console.print("[yellow]    1. Create a targets.txt file with one target per line[/yellow]")
+                console.print("[yellow]    2. Use Menu → Set targets → Single target to specify one manually[/yellow]\n")
+                logger.warning(f"Scan validation failed: targets file missing: {self.options['targets']}")
+                return False
         
         if not os.path.exists(self.options['wordlist']):
             console.print(f"[red]Error: Wordlist not found: {self.options['wordlist']}[/red]")
@@ -956,10 +967,14 @@ class VoidSeekerMenu:
     
     def _display_config_inline(self):
         """Display current configuration in a formatted box"""
-        targets_display = "Single target" if self.options['single_target'] else (
-            f"{len(read_targets(self.options['targets']))} targets" 
-            if self.options['targets'] else "[red]Not set[/red]"
-        )
+        # Safely get target count, handling missing file
+        try:
+            targets_display = "Single target" if self.options['single_target'] else (
+                f"{len(read_targets(self.options['targets']))} targets" 
+                if self.options['targets'] and Path(self.options['targets']).exists() else "[red]Not set[/red]"
+            )
+        except Exception:
+            targets_display = "[red]Not set[/red]"
         
         shodan_status = "[green]✓ Enabled[/green]" if self.options['use_shodan'] else "[red]✗ Disabled[/red]"
         port_scan_status = f"[green]✓ {self.options['port_scan_intensity']}[/green]" if self.options['port_scan_intensity'] else "[red]✗ Disabled[/red]"
