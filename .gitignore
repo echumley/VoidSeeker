@@ -80,8 +80,9 @@ results.txt
 output/
 reports/
 *.csv
-!targets.txt
 !config/wordlists/
+targets.txt
+diagram.JPG
 
 # Data files
 data/postgres/*

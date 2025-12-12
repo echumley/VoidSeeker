@@ -1,5 +1,7 @@
 # VoidSeeker
 
+![VoidSeeker_Logo](voidseeker_logo.png)
+
 **Discover the undiscoverable.** VoidSeeker is a focused deep-web reconnaissance tool that finds internet-exposed services not indexed by search engines - hidden admin panels, exposed management interfaces (IPMI, iDRAC, Cockpit), database consoles, and obscure endpoints that traditional search engines miss.
 
 **Philosophy:** VoidSeeker is a *discovery and fingerprinting tool*, not another vulnerability scanner. It finds the targets; you choose what to do with them.
