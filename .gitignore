@@ -82,6 +82,7 @@ reports/
 *.csv
 !config/wordlists/
 targets.txt
+archive/
 diagram.JPG
 
 # Data files
